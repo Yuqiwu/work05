@@ -7,18 +7,19 @@
 
 	<body>
 		<h1> Occupations </h1>
+		<h2> Random Occupation Selector </h3>
+		<p> Your chossen occupation is: <a href={{choice[2]}}> {{ choice[0] }}</a> </p>
 		<table>
 			<tr>
 				<th>Occupation</th>
 				<th>Percentage</th>
-				<th>Link</th>
 			</tr>
-
+			{% for job in info %}
 			<tr>
-				<th> {{occupation}} </th>
-				<th> {{percent}} </th>
-				<th> <a href={{link}}> here </a> to go to link </th>
+				<th> {{info[job][0]}} </th>
+				<th> {{info[job][1]}} </th>
 			</tr>
+			{% endfor %}
 		</table>
 	</body>
 </html>
